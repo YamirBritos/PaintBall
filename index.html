@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Canchas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Parte superior con logo y título -->
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo del Club" id="logo">
+            <h1>Reserva de Canchas</h1>
+        </div>
+    </header>
+
+    <!-- Sección de reserva -->
+    <section class="reservation-form">
+        <h2>Reservar una Cancha</h2>
+        <form id="reservation-form">
+            <div class="form-group">
+                <label for="cancha">Elige una Cancha:</label>
+                <select id="cancha" name="cancha">
+                    <option value="">Selecciona una cancha</option>
+                    <option value="cancha1">Cancha 1</option>
+                    <option value="cancha2">Cancha 2</option>
+                    <option value="cancha3">Cancha 3</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+            </div>
+
+            <div class="form-group">
+                <label for="cliente">Nombre del Cliente:</label>
+                <input type="text" id="cliente" name="cliente" placeholder="Nombre completo">
+            </div>
+
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" name="dni" placeholder="DNI (8 dígitos)">
+            </div>
+
+            <div class="form-group">
+                <label for="metodo-pago">Método de Pago:</label>
+                <select id="metodo-pago" name="metodo-pago">
+                    <option value="">Selecciona un método</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="turnos">Cantidad de Turnos:</label>
+                <input type="number" id="turnos" name="turnos" min="1" placeholder="Cantidad de turnos">
+            </div>
+
+            <div class="form-group">
+                <h3 id="fecha-seleccionada">Horario disponible para [Fecha Seleccionada]</h3>
+                <table id="horarios-table">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Cancha 1</th>
+                            <th>Cancha 2</th>
+                            <th>Cancha 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Horarios se llenarán dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="reservar-btn">Reservar</button>
+        </form>
+    </section>
+
+    <!-- Modal para mostrar los datos de la reserva -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Reserva</title>
+</head>
+<body>
+    <h2>Reserva de Cancha</h2>
+    <form action="guardar_reserva.php" method="POST">
+        Cliente: <input type="text" name="cliente" required><br>
+        DNI: <input type="text" name="dni" required><br>
+        Cancha: <input type="text" name="cancha" required><br>
+        Fecha: <input type="date" name="fecha" required><br>
+        Horario: <input type="time" name="horario" required><br>
+        Método de Pago: 
+        <select name="metodo_pago" required>
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta</option>
+        </select><br>
+        Precio Total: <input type="number" step="0.01" name="precio_total" required><br>
+        <input type="submit" value="Guardar Reserva">
+    </form>
+</body>
+</html>
